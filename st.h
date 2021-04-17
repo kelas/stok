@@ -7,9 +7,9 @@
 #include<fcntl.h>     //!< open|close
 
 typedef unsigned long long U;typedef char G,*S;typedef int I;typedef void _;
-#define N(n,a...) {U _n=(n),i=0;while(i<_n){a;++i;}}
-#define Z(b,a...) if(b){a;}else
-#define P(b,a...)   if(b)R({a;});
+#define N(n,...) {U _n=(n),i=0;while(i<_n){__VA_ARGS__;++i;}}
+#define Z(b,...) if(b){__VA_ARGS__;}else
+#define P(b,...) if(b)R __extension__({__VA_ARGS__;});
 #define ZG static G
 #define sl strlen
 #define O printf

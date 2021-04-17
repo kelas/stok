@@ -1,2 +1,4 @@
+CC=clang
+#CC=gcc-10
 all:
-	$(CC) -pedantic -Wno-variadic-macros -Wno-gnu-statement-expression st.c -ost && ./st
+	$(CC) -Os -Werror -pedantic st.c -ost && ./st
